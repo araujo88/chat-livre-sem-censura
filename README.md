@@ -1,2 +1,2 @@
-# simple-webchat
-A simple webchat made with javascript and PHP
+# chat-livre-sem-censura
+A simple webchat made with PHP
