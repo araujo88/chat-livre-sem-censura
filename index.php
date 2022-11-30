@@ -15,12 +15,14 @@ if(isset($_GET['logout'])){
 if(isset($_POST['enter'])){
     if(strlen($_POST['name']) > 16){
         echo '<script>alert("O nome não pode exceder 16 caracteres!")</script>';
+        header("Refresh:0");
     }
     else if($_POST['name'] != ""){
         $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
     }
     else{
         echo '<script>alert("O nome não pode ficar em branco!")</script>';
+        header("Refresh:0");
     }
 }
  
@@ -61,7 +63,7 @@ function loginForm(){
             <div id="content">
                 <div id="wrapper">
                     <div id="menu">
-                        <p class="welcome">Olá, <b><?php echo $_SESSION['name']; ?>!</b></p>
+                        <p class="welcome">Olá, <?php echo $_SESSION['name']; ?>!</p>
                         <p class="logout"><a id="exit" href="#">Sair</a></p>
                     </div>
         
