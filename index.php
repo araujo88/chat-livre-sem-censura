@@ -21,8 +21,7 @@ if(isset($_POST['enter'])){
         $_SESSION['name'] = stripslashes(htmlspecialchars($_POST['name']));
     }
     else{
-        echo '<script>alert("O nome não pode ficar em branco!")</script>';
-        header("Refresh:0");
+        $_SESSION['name'] = "Anônimo" . strval(random_int(0, 9999));
     }
 }
  
