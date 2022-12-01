@@ -66,12 +66,18 @@ body {
     text-align: end;
 }
 
-.foreigner-message .message {
-    margin-left: 20px;
+.message-owner 
+.message-content-wrapper 
+.text-message-wrapper
+ {
+    margin-left: auto;
 }
 
-.foreigner-message .timestamp {
-    text-align: start;
+.foreigner-message 
+.message-content-wrapper 
+.text-message-wrapper
+ {
+    margin-right: auto;
 }
 
 .room-action-leave {
@@ -98,6 +104,7 @@ body {
 .chat-message {
     padding: 0px 0px 30px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.035);
+    font-size: 25px;
 }
 
 .text-message {
@@ -108,7 +115,7 @@ body {
 
 .text-message-wrapper {
     margin-top: 20px;
-    width: 100%;
+    max-width: 1200px;
     text-align: justify;
 }
 
@@ -124,6 +131,10 @@ body {
     font-size: 30px;
     color: rgba(255, 255, 255, 0.294);
     cursor: pointer;
+}
+
+.scroll-to-bottom-wrapper i:hover {
+    color: rgba(255, 255, 255, 0.642)
 }
 
 .chat-container {
@@ -219,6 +230,7 @@ body {
 @media only screen and (max-width: 900px) {
     .chat-message {
         padding: 0px 0px 0px 0px;
+        font-size: 23px;
     }
 
     .message-content-wrapper {
@@ -258,12 +270,20 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    .chat-message {
+        font-size: 20px;
+    }
+
     .wrapper-login-form label {
         font-size: 27px;
     }
 }
 
 @media only screen and (max-width: 376px) {
+    .chat-message {
+        font-size: 17px;
+    }
+
     .wrapper-login-form label {
         line-height: 32px;
     }
