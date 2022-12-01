@@ -1,6 +1,10 @@
+// Global
 let poolingIsRunning = true;
 let isUserIdle = false;
 let requestIsPending = false;
+let isSendindMessage = false;
+
+// Constants
 const POOLING_MS_TIME = 500;
 const USERNAME = document.getElementById("username").value;
 const CHAT_BOX_ELEMENT = document.getElementById("chat-box");
@@ -35,7 +39,16 @@ const attachSendMessageBtnListener = () => {
             const value = structuredClone(e.target.value);
             e.target.value = "";
 
+            sendMessageBtn.setAttribute("disabled", "disabled");
+            sendMessageBtn.classList.add("input-disabled");
+            sendMessageBtn.setAttribute("placeholder", "Enviando mensagem...")
+
+            if (isSendindMessage) {
+                return;
+            }
+
             if (value == "") return;
+            isSendindMessage = true;
 
             const payload = new FormData();
             payload.append("action", "append_message");
@@ -52,7 +65,11 @@ const attachSendMessageBtnListener = () => {
                     console.log(err);
                 })
                 .finally(() => {
-
+                    isSendindMessage = false;
+                    sendMessageBtn.removeAttribute("disabled");
+                    sendMessageBtn.classList.remove("input-disabled");
+                    sendMessageBtn.setAttribute("placeholder", "Enter para enviar")
+                    sendMessageBtn.focus();
                 })
         }
     });

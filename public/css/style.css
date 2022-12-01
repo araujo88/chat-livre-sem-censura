@@ -165,3 +165,8 @@ body {
 .wrapper-login-form label {
     font-size: 32px;
 }
+
+.input-disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
