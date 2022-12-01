@@ -7,6 +7,7 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
+    overflow-x: auto;
 }
 
 .cursor-pointer {
@@ -66,10 +67,27 @@ body {
 
 .chat-message {
     align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.035);
+    border-top: 1px solid rgba(255, 255, 255, 0.035);
 }
 
 .message {
-    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.scroll-to-bottom-wrapper {
+    min-width: 200px;
+    max-width: 150px;
+}
+
+.chat-container {
+    position: relative;
+    min-width: 655px;
+    padding-right: 20px;
+}
+
+.right-side {
+    display: flex;
 }
 
 ::-webkit-scrollbar {
@@ -94,4 +112,66 @@ body {
 ::-webkit-scrollbar-thumb:active {
     background: rgba(74, 74, 109, 0.9);
 }
- 
+
+#menu {
+    height: 100%;
+    width: 0;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.generic-menu-wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+.show-nav-menu {
+    width: 280px !important;
+    padding: 1rem !important;
+}
+
+.hide-nav-menu {
+    width: 0px !important;
+    padding: 0rem !important;
+}
+
+#wrapper-btn-menu {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 500;
+}
+
+.btn-menu {
+    cursor: pointer;
+    color: white;
+    font-size: 32px;
+}
+
+@media only screen and (max-width: 750px) {
+    * {
+        font-size: 16px;
+    }
+
+    .message-owner .message {
+        margin-right: 5px;
+    }
+    
+    .foreigner-message .message {
+        margin-left: 5px;
+    }
+    
+    .foreigner-message .timestamp {
+        text-align: start;
+    }
+    
+    .chat-message .timestamp {
+        min-width: 150px;
+    }
+}

@@ -6,36 +6,45 @@ if(!isset($_SESSION)) session_start();
 <!-- Session ID !-->
 <input id="username" type="hidden" value="<?= $_SESSION['name'] ?>">
 
-<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-    <div class="generic-wrapper border-bottom border-white p-3">
-        <a href="#" class="d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none w-100">
+<!-- Side menu -->
+<div id="menu" class="d-flex flex-column flex-shrink-0 text-white bg-dark hide-nav-menu">
+    <div class="generic-menu-wrapper">
+        <div class="generic-wrapper border-bottom border-white p-3 text-center">
             <span class="fs-4">Menu</span>
-        </a>
-    </div>
-    <div class="d-flex flex-column mt-3 h-100">
-        <div class="mt-3">
-            <button id="chat-link-nav-anchor" class="w-100 btn btn-primary">Chat</button>
         </div>
-        <div class="mt-3">
-            <button id="logout-link-nav-anchor" class="w-100 btn btn-danger">Logout</button>
+        <div class="d-flex flex-column mt-3 h-100">
+            <div class="mt-3">
+                <button id="chat-link-nav-anchor" tabindex="-1" class="w-100 btn btn-primary">Chat</button>
+            </div>
+            <div class="mt-3">
+                <button id="logout-link-nav-anchor" tabindex="-1" class="w-100 btn btn-danger">Logout</button>
+            </div>
+            <span class="mt-auto text-center text-white">Bem-vindo <?= $_SESSION['name'] ?></span>
         </div>
-        <div class="mt-3">
-            <button id="scroll-link-nav-anchor" class="w-100 btn btn-success">Scroll Bottom</button>
-        </div>
-        <span class="mt-auto text-center text-white">Bem-vindo <?= $_SESSION['name'] ?></span>
     </div>
 </div>
 
+<!-- Button open menu -->
+<div id="wrapper-btn-menu">
+    <button id="btn-menu" tabindex="1" class="btn-menu btn">
+        <span class="fa fa-bars"></span>
+    </button>
+</div>
+
+<!-- Container chatbox -->
 <div class="right-side w-100 h-100">
     <div class="generic-wrapper p-5 h-100 d-flex">
         <div class="chat-container w-100 h-100 d-flex flex-column">
             <div class="chat-title d-flex justify-content-center">
                 <h2 class="text-white">Chat room</h2>
+            </div>            
+            <div id="chat-box" tabindex="4" class="d-flex flex-column h-100 text-white">               
             </div>
-            <div id="chat-box" tabindex="0" class="d-flex flex-column h-100 text-white">
-            </div>
-            <div class="chat-message-input">
-                <input type="text" class="form-control" placeholder="Enter para enviar" id="send-message-btn">
+            <div class="chat-message-input d-flex">
+                <input type="text" class="form-control" tabindex="5" placeholder="Enter para enviar" id="send-message-btn">
+                <div class="scroll-to-bottom-wrapper">
+                    <button id="scroll-link-nav-anchor" tabindex="6" class="w-100 btn btn-success">Scroll Bottom</button>
+                </div>
             </div>
         </div>
     </div>

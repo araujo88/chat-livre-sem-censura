@@ -4,6 +4,12 @@ let requestIsPending = false;
 const POOLING_MS_TIME = 500;
 const USERNAME = document.getElementById("username").value;
 const CHAT_BOX_ELEMENT = document.getElementById("chat-box");
+const MENU_WRAPPER = document.getElementById("menu");
+const chatBtn = document.getElementById("chat-link-nav-anchor");
+const sendMessageBtn = document.getElementById("send-message-btn");
+const scrollBottomBtn = document.getElementById("scroll-link-nav-anchor");
+const logoutBtn = document.getElementById("logout-link-nav-anchor");
+const triggerMenuBtn = document.getElementById("btn-menu");
 
 document.addEventListener("visibilitychange", (event) => {
     if (document.visibilityState == "visible") {
@@ -14,8 +20,7 @@ document.addEventListener("visibilitychange", (event) => {
 });
 
 const attachSendMessageBtnListener = () => {
-    const btn = document.getElementById("send-message-btn");
-    btn.addEventListener("keypress", (e) => {
+    sendMessageBtn.addEventListener("keypress", (e) => {
         // Enter message
         if (e.key == "Enter") {
             const value = structuredClone(e.target.value);
@@ -41,16 +46,20 @@ const attachSendMessageBtnListener = () => {
     });
 }
 
-const attachScrollBottomBtnLister = () => {
-    const btn = document.getElementById("scroll-link-nav-anchor");
-    btn.addEventListener('click', () => {
+const attachScrollBottomBtnListener = () => {
+    scrollBottomBtn.addEventListener('click', () => {
         scrollToBottom();
     });
 }
 
+const attachChatBtnListener = () => {
+    chatBtn.addEventListener('click', () => {
+
+    });
+}
+
 const attachLogoutBtnListener = () => {
-    const btn = document.getElementById("logout-link-nav-anchor");
-    btn.addEventListener("click", (e) => {
+    logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
         poolingIsRunning = false;
         alert("Obrigado por utilizar!");
@@ -78,6 +87,28 @@ const attachLogoutBtnListener = () => {
                 console.log(err);
             });
     })
+}
+
+const attachTriggerMenuBtnListener = () => {    
+    triggerMenuBtn.addEventListener("click", e => {
+        // Menu Open
+        if (MENU_WRAPPER.classList.contains("hide-nav-menu")) {
+            MENU_WRAPPER.classList.remove("hide-nav-menu");
+            MENU_WRAPPER.classList.add("show-nav-menu");
+
+            // Tab
+            chatBtn.tabIndex = 2
+            logoutBtn.tabIndex = 3;
+        } else {
+            // Menu hide
+            MENU_WRAPPER.classList.remove("show-nav-menu");
+            MENU_WRAPPER.classList.add("hide-nav-menu");
+
+            // Tab
+            chatBtn.tabIndex = -1;
+            logoutBtn.tabIndex = -1;
+        }
+    });
 }
 
 const fetchMessages = (poolingIsRunning = false) => {
@@ -211,5 +242,6 @@ const runPooling = () => {
 
 attachSendMessageBtnListener();
 attachLogoutBtnListener();
-attachScrollBottomBtnLister();
+attachScrollBottomBtnListener();
+attachTriggerMenuBtnListener();
 fetchMessages();
