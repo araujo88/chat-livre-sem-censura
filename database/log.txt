@@ -6,3 +6,7 @@
 {"sender":"An\u00f4nimo9436","receiver":null,"message":"","room_action":"enter","timestamp":"2022-12-01 04:07:36"}
 {"sender":"An\u00f4nimo9436","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:10:12"}
 {"sender":"An\u00f4nimo4301","receiver":null,"message":"Acaba de entrar na sala!","room_action":"enter","timestamp":"2022-12-01 04:10:13"}
+{"sender":"An\u00f4nimo4301","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:15:06"}
+{"sender":"An\u00f4nimo6503","receiver":null,"message":"Acaba de entrar na sala!","room_action":"enter","timestamp":"2022-12-01 04:15:09"}
+{"sender":"An\u00f4nimo6503","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:15:10"}
+{"sender":"teste 123","receiver":null,"message":"Acaba de entrar na sala!","room_action":"enter","timestamp":"2022-12-01 04:15:12"}
