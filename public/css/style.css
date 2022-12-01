@@ -23,6 +23,7 @@ body {
 
 #chat-box {
     overflow-y: auto;
+    padding-bottom: 20px;
 }
 
 .room-action-talk {
