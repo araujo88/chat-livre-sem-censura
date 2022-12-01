@@ -1,4 +1,6 @@
 <?php
+include_once("secure.php");
+
 if(!isset($_SESSION)) session_start();
 
 include_once("methods.php");

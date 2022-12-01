@@ -1,3 +1,14 @@
+let poolingIsRunning = false;
+let isUserIdle = false;
+
+document.addEventListener("visibilitychange", (event) => {
+    if (document.visibilityState == "visible") {
+        isUserIdle = false;
+    } else {
+        isUserIdle = true;
+    }
+});
+
 const attachSendMessageBtnListener = () => {
     const btn = document.getElementById("send-message-btn");
     btn.addEventListener("keypress", (e) => {
@@ -5,7 +16,6 @@ const attachSendMessageBtnListener = () => {
         if (e.key == "Enter") {
             const value = structuredClone(e.target.value);
             e.target.value = "";
-            console.log(value);
 
             const payload = new FormData();
             payload.append("action", "append_message");
@@ -14,7 +24,6 @@ const attachSendMessageBtnListener = () => {
             fetch(apiUrl, { method: "POST", body: payload })
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data);
                 })
                 .catch(err => {
                     console.log(err);
@@ -56,7 +65,7 @@ const attachLogoutBtnListener = () => {
     })
 }
 
-const fetchMessages = () => {
+const fetchMessages = (poolingIsRunning = false) => {
     const values = new FormData();
     values.append("action", "retrive_messages");
 
@@ -69,29 +78,25 @@ const fetchMessages = () => {
         }
 
         if (data?.payload?.length > 0) {
-            const messageTextObjList = data.payload.split("\n");
-            const messagesArr = [];
-            messageTextObjList?.forEach((text, k) => {
-                // Regex to validate this?
-                if (text?.length > 0) {
-                    let obj = JSON.parse(text);
-                    obj.id = k;
-                    messagesArr.push(createChatMessageObject(obj));
-                }
-            });
+            const jsonString = data.payload;
+            let messagesArr = parseJsonStringToMessageObject(jsonString);
 
-            const chatBox = document.getElementById("chat-box");
-            messagesArr.forEach(el => {
-                chatBox.appendChild(el);
-            })
+            if (!poolingIsRunning) {
+                appendMessagesToDiv(messagesArr);
+                runPooling();
+            }
+
+            if (poolingIsRunning) {
+                let newMessages = hasNewMessages(messagesArr);
+                if (newMessages.length > 0) {
+                    appendMessagesToDiv(newMessages);
+                }
+            }
         }
     })
     .catch(err => {
         console.log(err);
-    })
-    .finally(() => {
-        
-    })
+    });
 }
 
 const createChatMessageObject = (messageObject) => {
@@ -119,7 +124,53 @@ const createChatMessageObject = (messageObject) => {
     wrapperEl.appendChild(senderEl);
     wrapperEl.appendChild(messageEl);
 
+    // Creating a composite key
+    wrapperEl.id = createCompositeKey(timestamp, sender, message);
+
     return wrapperEl;
+}
+
+const createCompositeKey = (timestamp, sender, message) => {
+    return btoa(`${timestamp.split(' ').join('_')}/${sender}/${message}`);
+}
+
+const parseJsonStringToMessageObject = (jsonString) => {
+    console.log(jsonString);
+    const messageTextObjList = jsonString.split("\n");
+    const messagesArr = [];
+    messageTextObjList?.forEach((text, k) => {
+        // Regex to validate this?
+        if (text?.length > 0) {
+            let obj = JSON.parse(text);
+            obj.id = k;
+            messagesArr.push(createChatMessageObject(obj));
+        }
+    });
+
+    return messagesArr;
+}
+
+const appendMessagesToDiv = (messagesArr) => {
+    const chatBox = document.getElementById("chat-box");
+    messagesArr.forEach(el => {
+        chatBox.appendChild(el);
+    })
+}
+
+const hasNewMessages = (incomingMessagesArr) => {
+    const presentMessagesHTMLCollection = document.getElementById("chat-box").children;
+    const presentMessagesArr = [].slice.call(presentMessagesHTMLCollection);
+    return incomingMessagesArr.filter(inc => !presentMessagesArr.some(pre => inc.id == pre.id));
+}
+
+const runPooling = () => {
+    setInterval(() => {
+        if (!isUserIdle) {
+            fetchMessages(true);
+        } else {
+            // Do nothing
+        }
+    }, 2000)
 }
 
 attachSendMessageBtnListener();

@@ -54,6 +54,7 @@ class Controller
         $message = $this->createMessageObject($_SESSION['name'], "Acaba de entrar na sala!", ROOM_ACTION_ENTER);
         $this->appendMessageToFile(DATABASE_MESSAGE_PATH, $message);
 
+        http_response_code(200);
         echo json_encode([
             "message" => "Login efetuado com sucesso, redirecionando...",
             "action" => "handle_sucesssfull_login"
@@ -67,6 +68,7 @@ class Controller
         $this->appendMessageToFile(DATABASE_MESSAGE_PATH, $message);
         
         session_destroy();
+        http_response_code(200);
         echo json_encode([
             "message" => "Obrigado por utilizar ;D",
             "action" => "handle_redirect_to_login"
@@ -84,6 +86,7 @@ class Controller
             return;
         }
 
+        http_response_code(200);
         echo json_encode([
             "action" => "fail_retrieve_messages",
             "message" => ""
@@ -94,6 +97,12 @@ class Controller
     {
         $message = $this->createMessageObject($_SESSION["name"], $message, ROOM_ACTION_TALK);
         $this->appendMessageToFile(DATABASE_MESSAGE_PATH, $message);
+        
+        http_response_code(201);
+        echo json_encode([
+            "action" => "created",
+            "message" => ""
+        ]);
     }
 
     private function appendMessageToFile(string $fileName, object $message): void

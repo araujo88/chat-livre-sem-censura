@@ -1,12 +1,4 @@
-{"sender":"teste 123","receiver":null,"message":"Lorem os caralho e pipipi popopo hur durr this is going","room_action":"enter","timestamp":"2022-12-01 02:31:38"}
-{"sender":"teste 123","receiver":null,"message":"Lorem os caralho e pipipi popopo hur durr this is going","room_action":"enter","timestamp":"2022-12-01 02:31:59"}
-{"sender":"123","receiver":null,"message":"teste hahahaha","room_action":"talk","timestamp":"2022-12-01 04:07:13"}
-{"sender":"123","receiver":null,"message":"manio???","room_action":"talk","timestamp":"2022-12-01 04:07:20"}
-{"sender":"123","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:07:33"}
-{"sender":"An\u00f4nimo9436","receiver":null,"message":"","room_action":"enter","timestamp":"2022-12-01 04:07:36"}
-{"sender":"An\u00f4nimo9436","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:10:12"}
-{"sender":"An\u00f4nimo4301","receiver":null,"message":"Acaba de entrar na sala!","room_action":"enter","timestamp":"2022-12-01 04:10:13"}
-{"sender":"An\u00f4nimo4301","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:15:06"}
-{"sender":"An\u00f4nimo6503","receiver":null,"message":"Acaba de entrar na sala!","room_action":"enter","timestamp":"2022-12-01 04:15:09"}
-{"sender":"An\u00f4nimo6503","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:15:10"}
-{"sender":"teste 123","receiver":null,"message":"Acaba de entrar na sala!","room_action":"enter","timestamp":"2022-12-01 04:15:12"}
+{"sender":"An\u00f4nimo3749","receiver":null,"message":"teste","room_action":"talk","timestamp":"2022-12-01 09:46:06"}
+{"sender":"An\u00f4nimo3749","receiver":null,"message":"bruuuuh","room_action":"talk","timestamp":"2022-12-01 09:55:35"}
+{"sender":"An\u00f4nimo3749","receiver":null,"message":"wtf hahahahaha","room_action":"talk","timestamp":"2022-12-01 09:55:39"}
+{"sender":"An\u00f4nimo3749","receiver":null,"message":"yeah shure","room_action":"talk","timestamp":"2022-12-01 09:55:45"}

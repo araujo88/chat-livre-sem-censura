@@ -14,6 +14,11 @@ const attachFormElementListener = () => {
                     return;
                 }
 
+                if (data?.action == 'handle_exceeded_16_char') {
+                    alert(data?.message);
+                    return;
+                }
+
                 console.log("Hmm, something went wrong!");
             })
             .catch(err => {
