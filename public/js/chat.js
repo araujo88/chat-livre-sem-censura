@@ -1,5 +1,6 @@
 let poolingIsRunning = true;
 let isUserIdle = false;
+let requestIsPending = false;
 const POOLING_MS_TIME = 500;
 const USERNAME = document.getElementById("username").value;
 
@@ -42,32 +43,30 @@ const attachLogoutBtnListener = () => {
     btn.addEventListener("click", (e) => {
         e.preventDefault();
         poolingIsRunning = false;
-        
-        setTimeout(() => {
-            const values = new FormData();
-            values.append("action", "logout");
-    
-            fetch(apiUrl, { method: "POST", body: values })
-                .then(resp => resp.json())
-                .then(data => {
-                    if (data?.action == "handle_redirect_to_login") {
-                        location.replace(loginPageUrl);
-                        return;
-                    }
-    
-                    if (data?.action == "unauthorized") {
-                        alert("A sua sessão foi expirada!")
-                        location.replace(loginPageUrl);
-                        return;
-                    }
-    
+        alert("Obrigado por utilizar!");
+        const values = new FormData();
+        values.append("action", "logout");
+
+        fetch(apiUrl, { method: "POST", body: values })
+            .then(resp => resp.json())
+            .then(data => {
+                if (data?.action == "handle_redirect_to_login") {
                     location.replace(loginPageUrl);
                     return;
-                })
-                .catch(err => {
-                    console.log(err);
-                });
-        }, POOLING_MS_TIME * 2);
+                }
+
+                if (data?.action == "unauthorized") {
+                    alert("A sua sessão foi expirada!")
+                    location.replace(loginPageUrl);
+                    return;
+                }
+
+                location.replace(loginPageUrl);
+                return;
+            })
+            .catch(err => {
+                console.log(err);
+            });
     })
 }
 
@@ -75,6 +74,7 @@ const fetchMessages = (poolingIsRunning = false) => {
     const values = new FormData();
     values.append("action", "retrive_messages");
 
+    requestIsPending = true;
     fetch(apiUrl + "?action=retrive_messages", { method: "GET" })
     .then(resp => resp.json())
     .then(data => {
@@ -103,7 +103,10 @@ const fetchMessages = (poolingIsRunning = false) => {
     })
     .catch(err => {
         console.log(err);
-    });
+    })
+    .finally(() => {
+        requestIsPending = false;
+    })
 }
 
 const createChatMessageObject = (messageObject) => {
@@ -179,7 +182,7 @@ const scrollToBottom = () => {
 
 const runPooling = () => {
     setInterval(() => {
-        if (!isUserIdle && poolingIsRunning) {
+        if (!isUserIdle && poolingIsRunning && !requestIsPending) {
             fetchMessages(true);
         } else {
             // Do nothing
