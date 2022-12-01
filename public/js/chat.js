@@ -179,7 +179,6 @@ const scrollToBottom = () => {
 
 const runPooling = () => {
     setInterval(() => {
-        console.log(isUserIdle, poolingIsRunning)
         if (!isUserIdle && poolingIsRunning) {
             fetchMessages(true);
         } else {
