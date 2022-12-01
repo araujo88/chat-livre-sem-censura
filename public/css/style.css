@@ -29,10 +29,29 @@ body {
 
 }
 
+.message-owner{
+    flex-direction: row-reverse !important;
+    margin-left: auto;
+}
+
+.foreigner-message {
+
+}
+
 .room-action-leave {
     color: rgba(255, 0, 0, 0.814);
 }
 
 .room-action-enter {
     color: rgba(0, 128, 0, 0.752)
+}
+
+.sender {
+    border: 1px solid rgba(124, 124, 124, 0.287);
+    border-radius: 5px;
+    padding: 0px 15px 0px 15px;
+}
+
+.chat-message {
+    align-items: center;
 }

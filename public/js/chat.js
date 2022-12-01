@@ -1,5 +1,7 @@
 let poolingIsRunning = false;
 let isUserIdle = false;
+const POOLING_MS_TIME = 500;
+const USERNAME = document.getElementById("username").value;
 
 document.addEventListener("visibilitychange", (event) => {
     if (document.visibilityState == "visible") {
@@ -104,21 +106,23 @@ const createChatMessageObject = (messageObject) => {
     let sender = messageObject.sender;
     let message = messageObject.message;
     let roomAction = messageObject.room_action;
+    let isMessageOwner = USERNAME == sender;
+    let classMessageOwner =  isMessageOwner ? "message-owner": "foreigner-message";
 
     let wrapperEl = document.createElement("div");
-    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", "p-2", roomAction);
+    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", "p-2", roomAction, classMessageOwner);
     wrapperEl.id = ""
 
     let timestampEl = document.createElement("span");
-    timestampEl.classList.add("timestamp", "me-2");
+    timestampEl.classList.add("timestamp", isMessageOwner ? "ms-2" : "me-2");
     timestampEl.innerText = timestamp;
 
     let senderEl = document.createElement("span");
-    senderEl.classList.add("sender", "me-2");
-    senderEl.innerText = sender + ":";
+    senderEl.classList.add("sender", isMessageOwner ? "ms-2" : "me-2");
+    senderEl.innerText = `${sender}`;
 
     let messageEl = document.createElement("span");
-    messageEl.classList.add("message");
+    messageEl.classList.add("message", isMessageOwner ? "ms-2" : "me-2");
     messageEl.innerText = message;
 
     wrapperEl.appendChild(timestampEl);
@@ -143,7 +147,6 @@ const parseJsonStringToMessageObject = (jsonString) => {
         // Regex to validate this?
         if (text?.length > 0) {
             let obj = JSON.parse(text);
-            obj.id = k;
             messagesArr.push(createChatMessageObject(obj));
         }
     });
@@ -171,7 +174,7 @@ const runPooling = () => {
         } else {
             // Do nothing
         }
-    }, 2000)
+    }, POOLING_MS_TIME)
 }
 
 attachSendMessageBtnListener();

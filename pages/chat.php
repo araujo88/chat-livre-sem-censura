@@ -3,6 +3,9 @@ if(!isset($_SESSION)) session_start();
 ?>
 <?php include("header.php") ?>
 
+<!-- Session ID !-->
+<input id="username" type="hidden" value="<?= $_SESSION['name'] ?>">
+
 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
     <div class="generic-wrapper border-bottom border-white p-3">
         <a href="#" class="d-flex justify-content-center align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none w-100">
