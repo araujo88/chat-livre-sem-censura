@@ -3,6 +3,7 @@ let isUserIdle = false;
 let requestIsPending = false;
 const POOLING_MS_TIME = 500;
 const USERNAME = document.getElementById("username").value;
+const CHAT_BOX_ELEMENT = document.getElementById("chat-box");
 
 document.addEventListener("visibilitychange", (event) => {
     if (document.visibilityState == "visible") {
@@ -86,6 +87,7 @@ const fetchMessages = (poolingIsRunning = false) => {
         if (data?.payload?.length > 0) {
             const jsonString = data.payload;
             let messagesArr = parseJsonStringToMessageObject(jsonString);
+            let canScroll = canScrollToBottom();
 
             if (!poolingIsRunning) {
                 appendMessagesToDiv(messagesArr);
@@ -96,8 +98,11 @@ const fetchMessages = (poolingIsRunning = false) => {
                 let newMessages = hasNewMessages(messagesArr);
                 if (newMessages.length > 0) {
                     appendMessagesToDiv(newMessages);
-                    scrollToBottom();
                 }
+            }
+
+            if (canScroll){
+                scrollToBottom()
             }
         }
     })
@@ -163,9 +168,8 @@ const parseJsonStringToMessageObject = (jsonString) => {
 }
 
 const appendMessagesToDiv = (messagesArr) => {
-    const chatBox = document.getElementById("chat-box");
     messagesArr.forEach(el => {
-        chatBox.appendChild(el);
+        CHAT_BOX_ELEMENT.appendChild(el);
     })
 }
 
@@ -176,8 +180,14 @@ const hasNewMessages = (incomingMessagesArr) => {
 }
 
 const scrollToBottom = () => {
-    const chatBox = document.getElementById("chat-box");
-    chatBox.scrollTop = chatBox.scrollHeight;
+    CHAT_BOX_ELEMENT.scrollTop = CHAT_BOX_ELEMENT.scrollHeight;
+}
+
+const canScrollToBottom = () => {
+    let differenceInPixels = CHAT_BOX_ELEMENT.scrollHeight - CHAT_BOX_ELEMENT.scrollTop;
+    let bottomInPixels = CHAT_BOX_ELEMENT.clientHeight;
+    let thresholdInPixels = 30;
+    return ((differenceInPixels - bottomInPixels) < thresholdInPixels);
 }
 
 const runPooling = () => {
