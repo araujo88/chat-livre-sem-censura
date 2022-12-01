@@ -37,17 +37,13 @@ const attachSendMessageBtnListener = () => {
         // Enter message
         if (e.key == "Enter") {
             const value = structuredClone(e.target.value);
+            if (isSendindMessage || value == "") return;
+
             e.target.value = "";
 
             sendMessageBtn.setAttribute("disabled", "disabled");
             sendMessageBtn.classList.add("input-disabled");
             sendMessageBtn.setAttribute("placeholder", "Enviando mensagem...")
-
-            if (isSendindMessage) {
-                return;
-            }
-
-            if (value == "") return;
             isSendindMessage = true;
 
             const payload = new FormData();
@@ -185,6 +181,7 @@ const createChatMessageObject = (messageObject) => {
     let sender = messageObject.sender;
     let message = messageObject.message;
     let roomAction = messageObject.room_action;
+    let id = messageObject.id;
     let isMessageOwner = USERNAME == sender;
     let classMessageOwner =  isMessageOwner ? "message-owner": "foreigner-message";
 
@@ -208,14 +205,10 @@ const createChatMessageObject = (messageObject) => {
     wrapperEl.appendChild(senderEl);
     wrapperEl.appendChild(messageEl);
 
-    // Creating a composite key
-    wrapperEl.id = createCompositeKey(timestamp, sender, message);
+    // Assign an ID
+    wrapperEl.id = id;
 
     return wrapperEl;
-}
-
-const createCompositeKey = (timestamp, sender, message) => {
-    return btoa(`${timestamp.split(' ').join('_')}/${sender}/${message}`);
 }
 
 const parseJsonStringToMessageObject = (jsonString) => {

@@ -20,7 +20,11 @@ body {
 
 .chat-message .timestamp {
     color: rgba(85, 85, 85, 0.779);
-    min-width: 160px;
+    min-width: 140px;
+}
+
+.timestamp {
+    margin: 0px 10px 0px 10px;
 }
 
 .chat-title {

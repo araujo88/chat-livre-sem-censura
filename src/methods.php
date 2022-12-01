@@ -125,7 +125,8 @@ class Controller
             "receiver" => null,
             "message" => $message,
             "room_action" => $roomAction,
-            "timestamp" => date('d/m/y h:i:s A')
+            "timestamp" => date('d/m/y h:i A'),
+            "id" => uniqid("", true)
         ];
     }
 }
