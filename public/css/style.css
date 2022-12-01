@@ -1,0 +1,26 @@
+html, 
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.c-bg-dark {
+    background-color: rgb(23, 23, 23);
+}
+
+.chat-message .timestamp {
+    color: rgba(85, 85, 85, 0.779);
+}
+
+#chat-box {
+    overflow-y: auto;
+}

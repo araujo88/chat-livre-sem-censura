@@ -1,0 +1,8 @@
+{"sender":"teste 123","receiver":null,"message":"Lorem os caralho e pipipi popopo hur durr this is going","room_action":"enter","timestamp":"2022-12-01 02:31:38"}
+{"sender":"teste 123","receiver":null,"message":"Lorem os caralho e pipipi popopo hur durr this is going","room_action":"enter","timestamp":"2022-12-01 02:31:59"}
+{"sender":"123","receiver":null,"message":"teste hahahaha","room_action":"talk","timestamp":"2022-12-01 04:07:13"}
+{"sender":"123","receiver":null,"message":"manio???","room_action":"talk","timestamp":"2022-12-01 04:07:20"}
+{"sender":"123","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:07:33"}
+{"sender":"An\u00f4nimo9436","receiver":null,"message":"","room_action":"enter","timestamp":"2022-12-01 04:07:36"}
+{"sender":"An\u00f4nimo9436","receiver":null,"message":"","room_action":"leave","timestamp":"2022-12-01 04:10:12"}
+{"sender":"An\u00f4nimo4301","receiver":null,"message":"Acaba de entrar na sala!","room_action":"enter","timestamp":"2022-12-01 04:10:13"}
