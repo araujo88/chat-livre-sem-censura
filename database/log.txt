@@ -1,4 +1,4 @@
-{"sender":"An\u00f4nimo3749","receiver":null,"message":"teste","room_action":"talk","timestamp":"2022-12-01 09:46:06"}
-{"sender":"An\u00f4nimo3749","receiver":null,"message":"bruuuuh","room_action":"talk","timestamp":"2022-12-01 09:55:35"}
-{"sender":"An\u00f4nimo3749","receiver":null,"message":"wtf hahahahaha","room_action":"talk","timestamp":"2022-12-01 09:55:39"}
-{"sender":"An\u00f4nimo3749","receiver":null,"message":"yeah shure","room_action":"talk","timestamp":"2022-12-01 09:55:45"}
+{"sender":"teste7878","receiver":null,"message":"teste","room_action":"talk","timestamp":"2022-12-01 09:59:52"}
+{"sender":"teste7878","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"2022-12-01 10:01:57"}
+{"sender":"teste 66","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"2022-12-01 10:02:00"}
+{"sender":"teste 66","receiver":null,"message":"eaeeeeeeeeeeeeeeeee hahahaha","room_action":"room-action-talk","timestamp":"2022-12-01 10:02:34"}

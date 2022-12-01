@@ -4,9 +4,9 @@ ini_set('display_errors', '1');
 if(!isset($_SESSION)) session_start();
 
 define("DATABASE_MESSAGE_PATH", "../database/log.txt");
-define("ROOM_ACTION_TALK", "talk");
-define("ROOM_ACTION_LEAVE", "leave");
-define("ROOM_ACTION_ENTER", "enter");
+define("ROOM_ACTION_TALK", "room-action-talk");
+define("ROOM_ACTION_LEAVE", "room-action-leave");
+define("ROOM_ACTION_ENTER", "room-action-enter");
 
 class Controller
 {
@@ -64,7 +64,7 @@ class Controller
     function handleLogout(): void
     {
         // Simple exit message
-        $message = $this->createMessageObject($_SESSION['name'], "", ROOM_ACTION_LEAVE);
+        $message = $this->createMessageObject($_SESSION['name'], "Acaba de sair da sala!", ROOM_ACTION_LEAVE);
         $this->appendMessageToFile(DATABASE_MESSAGE_PATH, $message);
         
         session_destroy();

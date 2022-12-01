@@ -103,9 +103,10 @@ const createChatMessageObject = (messageObject) => {
     let timestamp = messageObject.timestamp;
     let sender = messageObject.sender;
     let message = messageObject.message;
+    let roomAction = messageObject.room_action;
 
     let wrapperEl = document.createElement("div");
-    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", "p-2");
+    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", "p-2", roomAction);
     wrapperEl.id = ""
 
     let timestampEl = document.createElement("span");

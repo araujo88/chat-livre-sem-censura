@@ -25,3 +25,14 @@ body {
     overflow-y: auto;
 }
 
+.room-action-talk {
+
+}
+
+.room-action-leave {
+    color: rgba(255, 0, 0, 0.814);
+}
+
+.room-action-enter {
+    color: rgba(0, 128, 0, 0.752)
+}
