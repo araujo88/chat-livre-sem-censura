@@ -19,6 +19,9 @@ if(!isset($_SESSION)) session_start();
         <div class="mt-3">
             <button id="logout-link-nav-anchor" class="w-100 btn btn-danger">Logout</button>
         </div>
+        <div class="mt-3">
+            <button id="scroll-link-nav-anchor" class="w-100 btn btn-success">Scroll Bottom</button>
+        </div>
         <span class="mt-auto text-center text-white">Bem-vindo <?= $_SESSION['name'] ?></span>
     </div>
 </div>
@@ -29,7 +32,7 @@ if(!isset($_SESSION)) session_start();
             <div class="chat-title d-flex justify-content-center">
                 <h2 class="text-white">Chat room</h2>
             </div>
-            <div id="chat-box" class="d-flex flex-column h-100 text-white">
+            <div id="chat-box" tabindex="0" class="d-flex flex-column h-100 text-white">
             </div>
             <div class="chat-message-input">
                 <input type="text" class="form-control" placeholder="Enter para enviar" id="send-message-btn">

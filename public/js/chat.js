@@ -21,6 +21,8 @@ const attachSendMessageBtnListener = () => {
             const value = structuredClone(e.target.value);
             e.target.value = "";
 
+            if (value == "") return;
+
             const payload = new FormData();
             payload.append("action", "append_message");
             payload.append("message", value);
@@ -36,6 +38,13 @@ const attachSendMessageBtnListener = () => {
 
                 })
         }
+    });
+}
+
+const attachScrollBottomBtnLister = () => {
+    const btn = document.getElementById("scroll-link-nav-anchor");
+    btn.addEventListener('click', () => {
+        scrollToBottom();
     });
 }
 
@@ -202,4 +211,5 @@ const runPooling = () => {
 
 attachSendMessageBtnListener();
 attachLogoutBtnListener();
+attachScrollBottomBtnLister();
 fetchMessages();
