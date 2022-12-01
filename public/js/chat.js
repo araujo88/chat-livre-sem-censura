@@ -1,4 +1,4 @@
-let poolingIsRunning = false;
+let poolingIsRunning = true;
 let isUserIdle = false;
 const POOLING_MS_TIME = 500;
 const USERNAME = document.getElementById("username").value;
@@ -41,29 +41,33 @@ const attachLogoutBtnListener = () => {
     const btn = document.getElementById("logout-link-nav-anchor");
     btn.addEventListener("click", (e) => {
         e.preventDefault();
-        const values = new FormData();
-        values.append("action", "logout");
-
-        fetch(apiUrl, { method: "POST", body: values })
-            .then(resp => resp.json())
-            .then(data => {
-                if (data?.action == "handle_redirect_to_login") {
+        poolingIsRunning = false;
+        
+        setTimeout(() => {
+            const values = new FormData();
+            values.append("action", "logout");
+    
+            fetch(apiUrl, { method: "POST", body: values })
+                .then(resp => resp.json())
+                .then(data => {
+                    if (data?.action == "handle_redirect_to_login") {
+                        location.replace(loginPageUrl);
+                        return;
+                    }
+    
+                    if (data?.action == "unauthorized") {
+                        alert("A sua sessão foi expirada!")
+                        location.replace(loginPageUrl);
+                        return;
+                    }
+    
                     location.replace(loginPageUrl);
                     return;
-                }
-
-                if (data?.action == "unauthorized") {
-                    alert("A sua sessão foi expirada!")
-                    location.replace(loginPageUrl);
-                    return;
-                }
-
-                location.replace(loginPageUrl);
-                return;
-            })
-            .catch(err => {
-                console.log(err);
-            });
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        }, POOLING_MS_TIME * 2);
     })
 }
 
@@ -175,7 +179,8 @@ const scrollToBottom = () => {
 
 const runPooling = () => {
     setInterval(() => {
-        if (!isUserIdle) {
+        console.log(isUserIdle, poolingIsRunning)
+        if (!isUserIdle && poolingIsRunning) {
             fetchMessages(true);
         } else {
             // Do nothing
