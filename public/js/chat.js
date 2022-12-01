@@ -19,6 +19,15 @@ document.addEventListener("visibilitychange", (event) => {
     }
 });
 
+const onAuthenticated = () => {
+    poolingIsRunning = false;
+    requestIsPending = true;
+
+    alert("A sua sessão foi expirada!")
+    location.replace(loginPageUrl);
+    return;
+}
+
 const attachSendMessageBtnListener = () => {
     sendMessageBtn.addEventListener("keypress", (e) => {
         // Enter message
@@ -35,6 +44,9 @@ const attachSendMessageBtnListener = () => {
             fetch(apiUrl, { method: "POST", body: payload })
                 .then(resp => resp.json())
                 .then(data => {
+                    if (data?.action == "unauthorized") {
+                        onAuthenticated()
+                    }
                 })
                 .catch(err => {
                     console.log(err);
@@ -75,9 +87,7 @@ const attachLogoutBtnListener = () => {
                 }
 
                 if (data?.action == "unauthorized") {
-                    alert("A sua sessão foi expirada!")
-                    location.replace(loginPageUrl);
-                    return;
+                    onAuthenticated()
                 }
 
                 location.replace(loginPageUrl);
@@ -120,8 +130,7 @@ const fetchMessages = (poolingIsRunning = false) => {
     .then(resp => resp.json())
     .then(data => {
         if (data?.action == "unauthorized") {
-            alert("A sua sessão foi expirada!");
-            location.replace(loginPageUrl)            
+            onAuthenticated()
         }
 
         if (data?.payload?.length > 0) {

@@ -157,3 +157,11 @@ body {
     font-size: 25px;
     margin-bottom: 20px;
 }
+
+.wrapper-login-form {
+    max-width: 500px;
+}
+
+.wrapper-login-form label {
+    font-size: 32px;
+}
