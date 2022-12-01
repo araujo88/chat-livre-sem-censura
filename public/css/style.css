@@ -29,6 +29,7 @@ body {
 #chat-box {
     overflow-y: auto;
     padding-bottom: 20px;
+    padding-right: 20px;
 }
 
 .message-owner {
