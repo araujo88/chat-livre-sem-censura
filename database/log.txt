@@ -1,1 +1,0 @@
-{"sender":"SERVER ADMIN","receiver":null,"message":"Servi\u00e7o iniciado!!","room_action":"room-action-leave","timestamp":"01\/12\/22 07:33 PM","id":"63892baa12fde4.18565235"}
