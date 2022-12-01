@@ -7,8 +7,6 @@ include_once("methods.php");
 
 $controller = new Controller();
 
-sleep(5);
-
 // Unprotected
 if (isset($_POST['action']) && $_POST['action'] == 'login')
 {
