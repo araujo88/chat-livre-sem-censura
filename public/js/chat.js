@@ -132,7 +132,7 @@ const createChatMessageObject = (messageObject) => {
 
     let senderEl = document.createElement("span");
     senderEl.classList.add("sender");
-    senderEl.innerText = `${sender}`;
+    senderEl.innerText = `${isMessageOwner ? "Eu" : sender}`;
 
     let messageEl = document.createElement("span");
     messageEl.classList.add("message");
