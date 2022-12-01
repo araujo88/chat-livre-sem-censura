@@ -40,7 +40,7 @@ if(!isset($_SESSION)) session_start();
             </div>            
             <div id="chat-box" tabindex="4" class="d-flex flex-column h-100 text-white">               
             </div>
-            <div class="chat-message-input d-flex">
+            <div class="chat-message-input d-flex mt-3">
                 <input type="text" class="form-control me-5" tabindex="5" placeholder="Enter para enviar" id="send-message-btn">
                 <div class="scroll-to-bottom-wrapper">
                     <button id="scroll-link-nav-anchor" tabindex="6" class="w-100 btn btn-success">Scroll Bottom</button>
