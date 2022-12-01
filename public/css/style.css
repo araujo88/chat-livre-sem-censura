@@ -19,7 +19,7 @@ body {
 
 .chat-message .timestamp {
     color: rgba(85, 85, 85, 0.779);
-    min-width: 200px;
+    min-width: 160px;
 }
 
 .chat-title {
@@ -31,17 +31,22 @@ body {
     padding-bottom: 20px;
 }
 
-.room-action-talk {
-
-}
-
-.message-owner{
+.message-owner {
     flex-direction: row-reverse !important;
     margin-left: auto;
+    text-align: end;
 }
 
-.foreigner-message {
+.message-owner .message {
+    margin-right: 20px;
+}
 
+.foreigner-message .message {
+    margin-left: 20px;
+}
+
+.foreigner-message .timestamp {
+    text-align: start;
 }
 
 .room-action-leave {

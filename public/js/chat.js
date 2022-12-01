@@ -115,15 +115,15 @@ const createChatMessageObject = (messageObject) => {
     wrapperEl.id = ""
 
     let timestampEl = document.createElement("span");
-    timestampEl.classList.add("timestamp", isMessageOwner ? "ms-2" : "me-2");
+    timestampEl.classList.add("timestamp");
     timestampEl.innerText = timestamp;
 
     let senderEl = document.createElement("span");
-    senderEl.classList.add("sender", isMessageOwner ? "ms-2" : "me-2");
+    senderEl.classList.add("sender");
     senderEl.innerText = `${sender}`;
 
     let messageEl = document.createElement("span");
-    messageEl.classList.add("message", isMessageOwner ? "ms-2" : "me-2");
+    messageEl.classList.add("message");
     messageEl.innerText = message;
 
     wrapperEl.appendChild(timestampEl);
