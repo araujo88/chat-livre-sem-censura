@@ -28,7 +28,28 @@ body {
 }
 
 .chat-title {
+    height: 90px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.189);
+    color: white;
+    position: relative;
+}
+
+.wrapper-chat-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip-message {    
+    display: flex;
+    border: 1px solid rgba(154, 95, 203, 0.34);
+    border-radius: 5px;
+}
+
+.tooltip-message-wrapper {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
 }
 
 #chat-box {
@@ -37,14 +58,12 @@ body {
     padding-right: 20px;
 }
 
-.message-owner {
-    flex-direction: row-reverse !important;
+.message-owner 
+.message-content-wrapper 
+.tooltip-message-wrapper
+.tooltip-message {
     margin-left: auto;
     text-align: end;
-}
-
-.message-owner .message {
-    margin-right: 20px;
 }
 
 .foreigner-message .message {
@@ -56,37 +75,60 @@ body {
 }
 
 .room-action-leave {
-    color: rgba(255, 0, 0, 0.814);
+    color: rgba(223, 113, 113, 0.814);
 }
 
 .room-action-enter {
-    color: rgba(0, 128, 0, 0.752)
+    color: rgba(94, 206, 94, 0.752)
 }
 
 .sender {
-    border: 1px solid rgba(124, 124, 124, 0.287);
-    border-radius: 5px;
     padding: 0px 15px 0px 15px;
 }
 
-.chat-message {
+.message-content-wrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
     align-items: center;
+    margin-top: 10px;
+}
+
+.chat-message {
+    padding: 0px 0px 30px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.035);
 }
 
-.message {
+.text-message {
     word-wrap: break-word;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+.text-message-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    text-align: justify;
 }
 
 .scroll-to-bottom-wrapper {
-    min-width: 200px;
-    max-width: 150px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.scroll-to-bottom-wrapper i {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.294);
+    cursor: pointer;
 }
 
 .chat-container {
     position: relative;
-    min-width: 655px;
-    padding-right: 20px;
+    min-width: 280px;
 }
 
 .right-side {
@@ -119,12 +161,11 @@ body {
 #menu {
     height: 100%;
     width: 0;
-    position: relative;
+    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    transition: 0.5s;
 }
 
 .generic-menu-wrapper {
@@ -132,10 +173,11 @@ body {
     height: 100%;
     flex-direction: column;
     min-width: 250px;
+    margin-top: 30px;
 }
 
 .show-nav-menu {
-    width: 280px !important;
+    width: 100% !important;
     padding: 1rem !important;
 }
 
@@ -146,12 +188,12 @@ body {
 
 #wrapper-btn-menu {
     position: absolute;
-    margin-left: 10px;
-    margin-top: 10px;
-    z-index: 500;
+    z-index: 100;
+    left: 0;
+    top: 0;
 }
 
-.btn-menu {
+#btn-menu {
     cursor: pointer;
     color: white;
     font-size: 32px;
@@ -159,7 +201,6 @@ body {
 
 .chat-title span {
     font-size: 25px;
-    margin-bottom: 20px;
 }
 
 .wrapper-login-form {
@@ -173,4 +214,65 @@ body {
 .input-disabled {
     background-color: #e9ecef;
     opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+    .chat-message {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .message-content-wrapper {
+        padding: 10px;
+    }
+
+    .generic-wrapper {
+        padding: 0px !important;
+    }
+
+    .chat-message-input {
+        margin: 0px 10px 10px 10px;
+    }
+
+    .scroll-to-bottom-wrapper {
+        margin-right: 1.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    #wrapper-btn-menu {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    } 
+
+    #wrapper-btn-menu button {
+        margin-left: 5px;
+    }
+
+    #chat-box {
+        padding-right: 0;
+    }
+
+    .message-content-wrapper {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .wrapper-login-form label {
+        font-size: 27px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .wrapper-login-form label {
+        line-height: 32px;
+    }
+
+    .wrapper-chat-title span {
+        font-size: 20px;
+    }
+
+    .tooltip-message {
+        flex-direction: column;
+    }
 }

@@ -23,6 +23,10 @@ document.addEventListener("visibilitychange", (event) => {
     }
 });
 
+const isMobile = () => {
+    return navigator.userAgentData.mobile;
+}
+
 const onAuthenticated = () => {
     poolingIsRunning = false;
     requestIsPending = true;
@@ -65,7 +69,7 @@ const attachSendMessageBtnListener = () => {
                     sendMessageBtn.removeAttribute("disabled");
                     sendMessageBtn.classList.remove("input-disabled");
                     sendMessageBtn.setAttribute("placeholder", "Enter para enviar")
-                    sendMessageBtn.focus();
+                    if (!isMobile()) sendMessageBtn.focus();
                 })
         }
     });
@@ -186,8 +190,14 @@ const createChatMessageObject = (messageObject) => {
     let classMessageOwner =  isMessageOwner ? "message-owner": "foreigner-message";
 
     let wrapperEl = document.createElement("div");
-    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", "p-3", roomAction, classMessageOwner);
+    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", roomAction, classMessageOwner);
     wrapperEl.id = ""
+
+    let messageContentWrapperEl = document.createElement("div");
+    messageContentWrapperEl.classList.add("message-content-wrapper");
+
+    let tooltipEl = document.createElement("div");
+    tooltipEl.classList.add("tooltip-message");
 
     let timestampEl = document.createElement("span");
     timestampEl.classList.add("timestamp");
@@ -197,13 +207,27 @@ const createChatMessageObject = (messageObject) => {
     senderEl.classList.add("sender");
     senderEl.innerText = `${isMessageOwner ? "Eu" : sender}`;
 
-    let messageEl = document.createElement("span");
-    messageEl.classList.add("message");
-    messageEl.innerText = message;
+    tooltipEl.appendChild(senderEl);
+    tooltipEl.appendChild(timestampEl);
 
-    wrapperEl.appendChild(timestampEl);
-    wrapperEl.appendChild(senderEl);
-    wrapperEl.appendChild(messageEl);
+    let messageWrapperEl = document.createElement("div");
+    messageWrapperEl.classList.add("text-message-wrapper");
+
+    let messageTextEl = document.createElement("span");
+    messageTextEl.classList.add("text-message");
+    messageTextEl.innerText = message;
+
+    messageWrapperEl.appendChild(messageTextEl);
+
+    let tooltipMessageWrapper = document.createElement("div");
+    tooltipMessageWrapper.classList.add("tooltip-message-wrapper");
+
+    tooltipMessageWrapper.appendChild(tooltipEl);
+
+    messageContentWrapperEl.appendChild(tooltipMessageWrapper);
+    messageContentWrapperEl.appendChild(messageWrapperEl);
+
+    wrapperEl.appendChild(messageContentWrapperEl);
 
     // Assign an ID
     wrapperEl.id = id;
