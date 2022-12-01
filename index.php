@@ -45,6 +45,7 @@ function loginForm(){
  
         <title>Chat livre e sem censura</title>
         <meta name="description" content="Chat livre e sem censura" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
