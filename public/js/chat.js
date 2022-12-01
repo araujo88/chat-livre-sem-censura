@@ -135,7 +135,7 @@ const createCompositeKey = (timestamp, sender, message) => {
 }
 
 const parseJsonStringToMessageObject = (jsonString) => {
-    console.log(jsonString);
+    (jsonString);
     const messageTextObjList = jsonString.split("\n");
     const messagesArr = [];
     messageTextObjList?.forEach((text, k) => {
