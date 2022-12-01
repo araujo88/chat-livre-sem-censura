@@ -92,6 +92,7 @@ const fetchMessages = (poolingIsRunning = false) => {
                 let newMessages = hasNewMessages(messagesArr);
                 if (newMessages.length > 0) {
                     appendMessagesToDiv(newMessages);
+                    scrollToBottom();
                 }
             }
         }
@@ -165,6 +166,11 @@ const hasNewMessages = (incomingMessagesArr) => {
     const presentMessagesHTMLCollection = document.getElementById("chat-box").children;
     const presentMessagesArr = [].slice.call(presentMessagesHTMLCollection);
     return incomingMessagesArr.filter(inc => !presentMessagesArr.some(pre => inc.id == pre.id));
+}
+
+const scrollToBottom = () => {
+    const chatBox = document.getElementById("chat-box");
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 const runPooling = () => {
