@@ -78,15 +78,23 @@ class Controller
 
     function handleGetMessages(): void
     {
-        if(file_exists(DATABASE_MESSAGE_PATH) && filesize(DATABASE_MESSAGE_PATH) > 0){
+        if(file_exists(DATABASE_MESSAGE_PATH)){
             $contents = file_get_contents(DATABASE_MESSAGE_PATH);
+
+            if (strlen($contents) == 0) {
+                $message = $this->createMessageObject('SERVER ADMIN', "Serviço iniciado!!", ROOM_ACTION_LEAVE);
+                $this->appendMessageToFile(DATABASE_MESSAGE_PATH, $message);
+                $contents = file_get_contents(DATABASE_MESSAGE_PATH);
+            }
+
+            http_response_code(200);
             echo json_encode([
                 "payload" => $contents
             ]);
             return;
         }
 
-        http_response_code(200);
+        http_response_code(500);
         echo json_encode([
             "action" => "fail_retrieve_messages",
             "message" => ""
