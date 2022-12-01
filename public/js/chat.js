@@ -163,7 +163,7 @@ const createChatMessageObject = (messageObject) => {
     let classMessageOwner =  isMessageOwner ? "message-owner": "foreigner-message";
 
     let wrapperEl = document.createElement("div");
-    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", "p-2", roomAction, classMessageOwner);
+    wrapperEl.classList.add("chat-message", "w-100", "d-flex", "flex-row", "p-3", roomAction, classMessageOwner);
     wrapperEl.id = ""
 
     let timestampEl = document.createElement("span");

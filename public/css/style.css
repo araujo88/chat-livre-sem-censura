@@ -68,7 +68,6 @@ body {
 .chat-message {
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.035);
-    border-top: 1px solid rgba(255, 255, 255, 0.035);
 }
 
 .message {
@@ -154,24 +153,7 @@ body {
     font-size: 32px;
 }
 
-@media only screen and (max-width: 750px) {
-    * {
-        font-size: 16px;
-    }
-
-    .message-owner .message {
-        margin-right: 5px;
-    }
-    
-    .foreigner-message .message {
-        margin-left: 5px;
-    }
-    
-    .foreigner-message .timestamp {
-        text-align: start;
-    }
-    
-    .chat-message .timestamp {
-        min-width: 150px;
-    }
+.chat-title span {
+    font-size: 25px;
+    margin-bottom: 20px;
 }

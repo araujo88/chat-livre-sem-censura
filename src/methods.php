@@ -125,7 +125,7 @@ class Controller
             "receiver" => null,
             "message" => $message,
             "room_action" => $roomAction,
-            "timestamp" => date('Y-m-d H:i:s')
+            "timestamp" => date('d/m/y h:i:s A')
         ];
     }
 }
