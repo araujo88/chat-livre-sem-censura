@@ -19,6 +19,11 @@ body {
 
 .chat-message .timestamp {
     color: rgba(85, 85, 85, 0.779);
+    min-width: 200px;
+}
+
+.chat-title {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.189);
 }
 
 #chat-box {
@@ -56,3 +61,31 @@ body {
 .chat-message {
     align-items: center;
 }
+
+.message {
+    word-break: break-all;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(74, 74, 109, 0.1);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(74, 74, 109, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(74, 74, 109, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(74, 74, 109, 0.9);
+}
+ 

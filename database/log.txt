@@ -1,0 +1,38 @@
+{"sender":"doentinho000","receiver":null,"message":"1","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:07"}
+{"sender":"doentinho000","receiver":null,"message":"2","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:09"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"hehehe","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:17"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"6","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:50"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"2","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:50"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"423","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:50"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"423","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:51"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"4","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:51"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"234","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:51"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"23","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:51"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"52","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:51"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:51"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"355","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:51"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"23","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:52"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"523","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:52"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"523","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:52"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"235","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:52"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"235","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:52"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"23","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:52"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"523","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:53"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"52","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:53"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"35","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:53"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"235","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:53"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"235","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:53"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"235","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:54"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"23","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:54"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"523","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:54"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"5","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:54"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"235","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:54"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"235","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:54"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"23","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:54"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"teste","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:58"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"haha","room_action":"room-action-talk","timestamp":"2022-12-01 10:33:59"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ A JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ JJJJJJJJJJJJJJJJJJ","room_action":"room-action-talk","timestamp":"2022-12-01 10:35:18"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ JJJJJJJJJJJJJJJJJJ","room_action":"room-action-talk","timestamp":"2022-12-01 10:35:22"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ","room_action":"room-action-talk","timestamp":"2022-12-01 10:35:32"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ","room_action":"room-action-talk","timestamp":"2022-12-01 10:38:16"}
+{"sender":"An\u00f4nimo4520","receiver":null,"message":"JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ","room_action":"room-action-talk","timestamp":"2022-12-01 10:38:33"}

@@ -12,13 +12,14 @@ if(!isset($_SESSION)) session_start();
             <span class="fs-4">Menu</span>
         </a>
     </div>
-    <div class="d-flex flex-column mt-3">
+    <div class="d-flex flex-column mt-3 h-100">
         <div class="mt-3">
             <button id="chat-link-nav-anchor" class="w-100 btn btn-primary">Chat</button>
         </div>
         <div class="mt-3">
             <button id="logout-link-nav-anchor" class="w-100 btn btn-danger">Logout</button>
         </div>
+        <span class="mt-auto text-center text-white">Bem-vindo <?= $_SESSION['name'] ?></span>
     </div>
 </div>
 
