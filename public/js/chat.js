@@ -4,14 +4,6 @@ let isUserIdle = false;
 let requestIsPending = false;
 let isSendindMessage = false;
 
-if (!structuredClone) {
-  structuredClone = function structuredClone(objectToClone) {
-    const stringified = JSON.stringify(objectToClone);
-    const parsed = JSON.parse(stringified);
-    return parsed;
-  };
-}
-
 // Constants
 const POOLING_MS_TIME = 500;
 const USERNAME = document.getElementById("username").value;
@@ -49,7 +41,7 @@ const attachSendMessageBtnListener = () => {
   sendMessageBtn.addEventListener("keypress", (e) => {
     // Enter message
     if (e.key == "Enter") {
-      const value = structuredClone(e.target.value);
+      const value = JSON.parse(JSON.stringify(e.target.value));
       if (isSendindMessage || value == "") return;
 
       e.target.value = "";
