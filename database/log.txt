@@ -1,0 +1,40 @@
+{"sender":"SERVER ADMIN","receiver":null,"message":"Servi\u00e7o iniciado!!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:04 PM","id":"63895d3e517460.96712595"}
+{"sender":"An\u00f4nimo848","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:06 PM","id":"63895db6011285.02551110"}
+{"sender":"An\u00f4nimo638","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"01\/12\/22 11:06 PM","id":"63895db79d3423.62676215"}
+{"sender":"An\u00f4nimo638","receiver":null,"message":"werwrwewerwerwer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:06 PM","id":"63895dc3a74c05.00624706"}
+{"sender":"An\u00f4nimo638","receiver":null,"message":"werewr","room_action":"room-action-talk","timestamp":"01\/12\/22 11:07 PM","id":"63895dc4958b61.39478635"}
+{"sender":"An\u00f4nimo638","receiver":null,"message":"werwer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:07 PM","id":"63895dc55138e5.37338124"}
+{"sender":"An\u00f4nimo638","receiver":null,"message":"wer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:07 PM","id":"63895dc5ed7494.91234560"}
+{"sender":"An\u00f4nimo638","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:08 PM","id":"63895e0148e7b2.35675478"}
+{"sender":"An\u00f4nimo7884","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"01\/12\/22 11:08 PM","id":"63895e0238a470.46979516"}
+{"sender":"An\u00f4nimo7884","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:10 PM","id":"63895e82d8ca28.48023565"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"01\/12\/22 11:10 PM","id":"63895e87aabf22.72729992"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"erterte","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8aa08fe0.70531303"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"ertet","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8b4f1880.39916670"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"erteter","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8c0c2707.47439183"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"tert","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8c7e3806.07210772"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"ert","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8cdbacf8.93939057"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"dfgdf","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8dd1bf67.62714763"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"dfg","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8e6c2cc2.01190200"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"dfgd","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8eef5079.14200068"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"g","room_action":"room-action-talk","timestamp":"01\/12\/22 11:10 PM","id":"63895e8fe33e30.42829643"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"werwrwerewrewr","room_action":"room-action-talk","timestamp":"01\/12\/22 11:17 PM","id":"6389603761fe24.76789581"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"sdfsfsfsf","room_action":"room-action-talk","timestamp":"01\/12\/22 11:17 PM","id":"63896039d681d7.39836866"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"wefwefewfwef","room_action":"room-action-talk","timestamp":"01\/12\/22 11:17 PM","id":"6389603f2966b0.51809540"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"wefewfewfw","room_action":"room-action-talk","timestamp":"01\/12\/22 11:17 PM","id":"63896044077000.83203487"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"<script>alert(\"teste\")<\/script>","room_action":"room-action-talk","timestamp":"01\/12\/22 11:20 PM","id":"638960d1842456.44036016"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"ertret","room_action":"room-action-talk","timestamp":"01\/12\/22 11:24 PM","id":"638961c9f0b9f1.15680283"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"ertret","room_action":"room-action-talk","timestamp":"01\/12\/22 11:24 PM","id":"638961caa48ab0.95988354"}
+{"sender":"Jair Bolsonaro","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:24 PM","id":"638961db82ac40.05635171"}
+{"sender":"leo","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"01\/12\/22 11:28 PM","id":"638962eb3e7509.80615616"}
+{"sender":"leo","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"01\/12\/22 11:40 PM","id":"638965b49b7c52.24563646"}
+{"sender":"leo","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:40 PM","id":"638965b90a1541.67081978"}
+{"sender":"An\u00f4nimo5492","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"01\/12\/22 11:42 PM","id":"6389661c9c1673.96872576"}
+{"sender":"An\u00f4nimo5492","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:42 PM","id":"6389662783cc36.96910317"}
+{"sender":"An\u00f4nimo2261","receiver":null,"message":"Acaba de entrar na sala!","room_action":"room-action-enter","timestamp":"01\/12\/22 11:42 PM","id":"63896628b8b683.64646632"}
+{"sender":"An\u00f4nimo2261","receiver":null,"message":"ewrwer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:42 PM","id":"6389662db4b852.88390396"}
+{"sender":"An\u00f4nimo2261","receiver":null,"message":"werwer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:42 PM","id":"6389662e39b657.46958817"}
+{"sender":"An\u00f4nimo2261","receiver":null,"message":"werwer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:42 PM","id":"6389662ea6c248.28327708"}
+{"sender":"An\u00f4nimo2261","receiver":null,"message":"ewrwer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:42 PM","id":"6389662f3cf744.47230919"}
+{"sender":"An\u00f4nimo2261","receiver":null,"message":"wer","room_action":"room-action-talk","timestamp":"01\/12\/22 11:42 PM","id":"6389662f955127.11431756"}
+{"sender":"An\u00f4nimo2261","receiver":null,"message":"Acaba de sair da sala!","room_action":"room-action-leave","timestamp":"01\/12\/22 11:43 PM","id":"638966419f9a74.50184106"}

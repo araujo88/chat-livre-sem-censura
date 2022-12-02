@@ -17,7 +17,10 @@ if(!isset($_SESSION)) session_start();
                 <button id="chat-link-nav-anchor" tabindex="-1" class="w-100 btn btn-primary">Chat</button>
             </div>
             <div class="mt-3">
-                <button id="logout-link-nav-anchor" tabindex="-1" class="w-100 btn btn-danger">Logout</button>
+                <button id="github-link-nav-anchor" tabindex="-1" class="w-100 btn btn-primary">GitHub</button>
+            </div>
+            <div class="mt-3">
+                <button id="logout-link-nav-anchor" tabindex="-1" class="w-100 btn btn-danger">Sair</button>
             </div>
             <span class="mt-auto text-center text-white">Bem-vindo <?= $_SESSION['name'] ?></span>
         </div>
@@ -37,7 +40,7 @@ if(!isset($_SESSION)) session_start();
                 </div>
 
                 <div class="wrapper-chat-title">
-                    <span>Chat room</span>
+                    <span>Chat livre e sem censura</span>
                 </div>
             </div>            
             <div id="chat-box" tabindex="4" class="d-flex flex-column h-100 text-white">               

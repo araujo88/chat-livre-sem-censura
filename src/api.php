@@ -1,5 +1,5 @@
 <?php
-include_once("secure.php");
+include_once("middleware.php");
 
 if(!isset($_SESSION)) session_start();
 
