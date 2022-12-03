@@ -1,0 +1,11 @@
+version: '1.0'
+services:
+  backend:
+    container_name: chat-livre-sem-censura
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
