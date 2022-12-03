@@ -9,6 +9,10 @@ A simple webchat made with PHP
 
 `make run`
 
+## Running on Docker
+
+`make up`
+
 ## Running on Tor (Debian)
 
  - Install tor:
