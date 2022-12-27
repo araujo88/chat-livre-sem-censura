@@ -1,5 +1,9 @@
 # chat-livre-sem-censura
-A simple webchat made with PHP
+A simple webchat made with PHP, resistant to censorship and devoted to free-speech.
+
+## Mirrors (Onion)
+
+http://taumkejpqvsbktzypxhikvphnlhevarxkoee2hdrfswzdfbrnekdxxad.onion/
 
 ## Install requirements (Debian)
 
